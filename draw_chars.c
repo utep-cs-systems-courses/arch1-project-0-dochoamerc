@@ -20,7 +20,7 @@ void print_char_5x7(char c)
   for (char row = 0; row < 5; row++) {
     unsigned char rowBits = font_5x7[c][row];
     for (char col = 0; col < 8; col++) {
-      unsigned char colMask = 1 << (7-col);
+      unsigned char colMask = 1 << (6-col);
       putchar( (rowBits & colMask) ? '*' : ' ');
     }
     putchar('\n');
